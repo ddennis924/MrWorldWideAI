@@ -72,7 +72,7 @@ export default function Home() {
     return (
         <div>
             <Head>
-                <title>OpenAI Quickstart</title>
+                <title>WorldWideAI</title>
                 <link rel="icon" href="/earth.png" />
             </Head>
 
@@ -80,17 +80,21 @@ export default function Home() {
                 <img src="/earth.png" className={styles.icon} />
                 <h3>Mr. WorldWide AI</h3>
                 <form onSubmit={onSubmit}>
-                    <select
-                        type="text"
-                        name="languages"
-                        id="langs"
-                        onChange={(e) => setLanguageInput(e.target.value)}
-                    >
-                        <option value="n/a">n/a</option>
-                        <option value="French">French</option>
-                        <option value="Chinese">Chinese</option>
-                        <option value="Spanish">Spanish</option>
-                    </select>
+                    <div className={styles.langContainer}>
+                        <h4>Choose Language:</h4>
+                        <select
+                            type="text"
+                            name="languages"
+                            id="langs"
+                            onChange={(e) => setLanguageInput(e.target.value)}
+                            className={styles.lang}
+                        >
+                            <option value="n/a">n/a</option>
+                            <option value="French">French</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Spanish">Spanish</option>
+                        </select>
+                    </div>
                     <input
                         type="text"
                         name="prompt"
